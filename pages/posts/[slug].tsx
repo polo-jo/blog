@@ -14,11 +14,10 @@ import { PostType } from "../../types/post";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
   preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ post, preview }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -61,7 +60,18 @@ type Params = {
   };
 };
 
-export async function getStaticProps({ params }: Params) {
+/**
+ * TODO - implement more type safety. ITEM type is not detailed at all..
+ */
+export async function getStaticProps({
+  params,
+}: Params): Promise<{
+  props: {
+    post: {
+      content: string;
+    };
+  };
+}> {
   const post = getPostBySlug(params.slug, [
     "title",
     "date",
