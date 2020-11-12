@@ -1,8 +1,6 @@
-import { Avatar } from "./avatar";
-import { DateFormatter } from "./date-formatter";
-import { CoverImage } from "./cover-image";
 import Link from "next/link";
 import { Author } from "../types/author";
+import { DateFormatter } from "./date-formatter";
 
 type Props = {
   title: string;
@@ -13,29 +11,18 @@ type Props = {
   slug: string;
 };
 
-export const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+export function PostPreview(props: Props): JSX.Element {
   return (
-    <div>
-      <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
+    <div className="mb-16">
+      <h3 className="text-3xl  leading-snug">
+        <Link as={`/posts/${props.slug}`} href="/posts/[slug]">
+          <a className="hover:underline">{props.title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+      <div className="text-lg mb-2">
+        <DateFormatter dateString={props.date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      <p className="text-lg leading-relaxed mb-4">{props.excerpt}</p>
     </div>
   );
-};
+}

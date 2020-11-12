@@ -9,7 +9,7 @@ type Props = {
   allPosts: PostType[];
 };
 
-const Index = ({ allPosts }: Props) => {
+function Index({ allPosts }: Props): JSX.Element {
   return (
     <>
       <Layout>
@@ -17,7 +17,7 @@ const Index = ({ allPosts }: Props) => {
           <title>Thoughts by Josef Polodna</title>
         </Head>
         <Container>
-          <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+          <section className="flex flex-col items-center md:justify-between mt-16 mb-16 md:mb-12">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
               Thoughts.
             </h1>
@@ -27,7 +27,7 @@ const Index = ({ allPosts }: Props) => {
             </h4>
           </section>
           <section>
-            <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
+            <div className="flex flex-col mb-32">
               {allPosts.map((post) => (
                 <PostPreview
                   key={post.slug}
@@ -45,11 +45,11 @@ const Index = ({ allPosts }: Props) => {
       </Layout>
     </>
   );
-};
+}
 
 export default Index;
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const allPosts = getAllPosts([
     "title",
     "date",
@@ -62,4 +62,4 @@ export const getStaticProps = async () => {
   return {
     props: { allPosts },
   };
-};
+}

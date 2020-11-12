@@ -4,7 +4,14 @@ type Props = {
   dateString: string;
 };
 
-export const DateFormatter = ({ dateString }: Props) => {
+export function DateFormatter({ dateString }: Props): JSX.Element {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL	d, yyyy")}</time>;
-};
+  return (
+    <time
+      className="text-gray-600 italic font-light text-base"
+      dateTime={dateString}
+    >
+      {format(date, "LLLL	d, yyyy")}
+    </time>
+  );
+}
