@@ -17,9 +17,9 @@ function Index({ allPosts }: Props): JSX.Element {
           <title>Thoughts by Josef Polodna</title>
         </Head>
         <Container>
-          <section className="flex flex-col items-center md:justify-between mt-16 mb-16 md:mb-12">
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-              Thoughts.
+          <section className="flex flex-col items-center md:justify-between pt-6 mb-16 md:mb-12">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-wide leading-tight md:pr-8">
+              Thoughts
             </h1>
             <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
               on Software Engineering, Functional Programming, and Front End

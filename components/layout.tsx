@@ -6,14 +6,14 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Layout = ({ children }: Props) => {
+export function Layout({ children }: Props) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-primary">
         <main>{children}</main>
       </div>
       <Footer />
     </>
   );
-};
+}

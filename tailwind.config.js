@@ -4,6 +4,9 @@ module.exports = {
   },
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   theme: {
+    backgroundColor: {
+      primary: "#fdf6e3",
+    },
     extend: {
       colors: {
         "accent-1": "#FAFAFA",
