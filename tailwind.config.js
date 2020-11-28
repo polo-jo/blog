@@ -7,6 +7,9 @@ module.exports = {
     backgroundColor: {
       primary: "#fdf6e3",
     },
+    textColor: {
+      header: "#d33682",
+    },
     extend: {
       colors: {
         "accent-1": "#FAFAFA",
