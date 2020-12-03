@@ -1,4 +1,4 @@
-import { Footer } from "./footer";
+// import { Footer } from "./footer";
 import { Meta } from "./meta";
 
 type Props = {
@@ -10,9 +10,7 @@ export function Layout({ children }: Props) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen bg-primary">
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
       {/* <Footer /> */}
     </>
   );

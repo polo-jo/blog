@@ -12,4 +12,19 @@
 @tailwind utilities;
 /* Stop purging. */
 
-/* Your own custom utilities */
+/* Custom Utilities and Styles */
+
+body::before {
+  content: "";
+  height: 5px;
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #d33682;
+}
+
+body {
+  height: calc(100vh - 10px);
+}

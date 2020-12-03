@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Author } from "../types/author";
-import { DateFormatter } from "./date-formatter";
+import { DateFormatter } from "./dateFormatter";
 
 type Props = {
   title: string;
@@ -14,11 +14,11 @@ type Props = {
 export function PostPreview(props: Props): JSX.Element {
   return (
     <div className="mb-10">
-      <h3 className="text-3xl leading-snug text-header">
+      <h2 className="text-4xl leading-snug text-header">
         <Link as={`/posts/${props.slug}`} href="/posts/[slug]">
           <a className="hover:underline">{props.title}</a>
         </Link>
-      </h3>
+      </h2>
       <div className="text-lg mb-2">
         <DateFormatter dateString={props.date} />
       </div>

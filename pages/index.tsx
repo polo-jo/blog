@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Container } from "../components/container";
 import { Layout } from "../components/layout";
-import { PostPreview } from "../components/post-preview";
+import { PostPreview } from "../components/PostPreview";
 import { getAllPosts } from "../lib/api";
 import { PostType } from "../types/post";
 
