@@ -13,7 +13,7 @@ type Props = {
 
 export function PostPreview(props: Props): JSX.Element {
   return (
-    <div className="mb-10">
+    <div className="mb-5">
       <h2 className="text-4xl leading-snug text-header">
         <Link as={`/posts/${props.slug}`} href="/posts/[slug]">
           <a className="hover:underline">{props.title}</a>
