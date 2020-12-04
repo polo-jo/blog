@@ -15,7 +15,7 @@ export function PostPreview(props: Props): JSX.Element {
   return (
     <div className="mb-5">
       <h2 className="text-4xl leading-snug text-header">
-        <Link as={`/posts/${props.slug}`} href="/posts/[slug]">
+        <Link as={`/thoughts/${props.slug}`} href="/thoughts/[slug]">
           <a className="hover:underline">{props.title}</a>
         </Link>
       </h2>
