@@ -9,6 +9,7 @@ module.exports = {
     },
     textColor: {
       header: "#d33682",
+      secondary: "#008b8b",
     },
     extend: {
       colors: {
