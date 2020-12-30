@@ -15,16 +15,16 @@ function Index(): JSX.Element {
         </Head>
         <Container>
           <Header />
-          <div className="lg:grid lg:grid-cols-4 lg:gap-4">
+          <div className="lg:grid lg:grid-cols-4 lg:gap-4 z-10">
             <section className="lg:col-span-2 lg:items-center">
               <h3 className="text-grey-500 text-xl">Josef Polodna (polo-jo)</h3>
               <h1 className="text-7xl font-semibold">Hello 👋, </h1>
-              <p>
+              <p className="text-lg">
                 I am a <BoldText>Front End Engineer</BoldText>, occasional{" "}
                 <BoldText>Designer</BoldText>, lover of <BoldText>UX</BoldText>,
                 and <BoldText>Functional Programming</BoldText> enthusiast.
               </p>
-              <p className="pt-6">
+              <p className="pt-6 text-lg">
                 I love overthinking things and sharing my{" "}
                 <BoldText>
                   <Link href="/thoughts">
@@ -45,6 +45,20 @@ function Index(): JSX.Element {
             </section>
           </div>
         </Container>
+        <div className="w-screen h-full absolute bottom-0 left-0">
+          <ul className="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </Layout>
     </>
   );

@@ -5,5 +5,5 @@ type Props = {
 };
 
 export function Container({ children }: Props): JSX.Element {
-  return <div className="container mx-auto px-5">{children}</div>;
+  return <div className="container mx-auto px-5 z-10">{children}</div>;
 }
