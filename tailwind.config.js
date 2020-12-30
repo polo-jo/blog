@@ -1,8 +1,8 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  future: {
-    purgeLayersByDefault: true,
-  },
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     backgroundColor: {
       primary: "#fdf6e3",
@@ -10,6 +10,7 @@ module.exports = {
     textColor: {
       header: "#d33682",
       secondary: "#008b8b",
+      grey: colors.trueGray,
     },
     extend: {
       colors: {
@@ -40,4 +41,8 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 };
