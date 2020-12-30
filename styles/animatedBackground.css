@@ -2,8 +2,9 @@
 
 .circles {
   position: absolute;
-
-  width: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   height: 90vh;
   z-index: -1;
 }
