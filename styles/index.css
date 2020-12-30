@@ -22,7 +22,8 @@ body::before {
   position: relative;
   top: 0;
   left: 0;
-  background-color: #d33682;
+  /* background-color: #d33682; */
+  background: linear-gradient(90deg, #d33682 60%, #008b8b);
 }
 
 body {
